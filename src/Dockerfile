@@ -1,6 +1,7 @@
 FROM node:alpine3.21
 WORKDIR /app
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 COPY .  .
+EXPOSE 8080
 ENTRYPOINT [ "node", "server.js" ]
